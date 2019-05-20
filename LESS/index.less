@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,500&display=swap');
+
+
+@mobile: ~"only screen and (max-width: 500px)";
+
+// Global Vars
+* {
+	box-sizing: border-box;
+  }
+  
+  html, body {
+	margin: 0; 
+	padding: 0;
+  }
+
+  h1, h2, h3, h4, h5 {
+	font-family: 'Quicksand', sans-serif;
+  }
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+  
+//Header Component  
+header {
+	
+
+	@media @mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h1 {
+		margin-top: 5px;
+		color: #14363f;
+	}
+
+	img {
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: auto;
+
+		// @media @mobile {
+		// 	max-width: 720px;
+		// }
+	}
+
+	button {
+		background-color: #008eb6; /* Green */
+		border: 2px solid white;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 25px;
+		margin: 4px 2px;
+		cursor: pointer;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
+	}
+	  	
+} //end header
+
+section {
+
+	@media @mobile {
+		// border: 2px solid red;
+		max-width: 440px;
+		width: 100%;
+		margin: 75px auto;
+		color: #14363f;
+	}
+}
