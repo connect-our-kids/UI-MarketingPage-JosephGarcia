@@ -64,18 +64,60 @@ header button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
 }
 @media only screen and (max-width: 500px) {
-  section {
+  .features {
     max-width: 440px;
     width: 100%;
     margin: 75px auto;
     color: #14363f;
+    text-align: center;
   }
 }
+.features h2 {
+  background-color: #91b2ce;
+  padding: 34px 10px;
+  border-radius: 10px;
+}
 @media only screen and (max-width: 500px) {
-  section img {
+  .features img {
     left: 0;
     top: 0;
     width: 100%;
     height: auto;
   }
+}
+@media only screen and (max-width: 500px) {
+  .test {
+    max-width: 440px;
+    width: 100%;
+    margin: 75px auto;
+    color: #14363f;
+    text-align: center;
+  }
+}
+.test h2 {
+  background-color: #91b2ce;
+  padding: 34px 10px;
+  border-radius: 10px;
+}
+.test .textBox {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.test .textBox img {
+  float: left;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 500px) {
+  .test .textBox img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+.test .textBox span {
+  font-size: 20px;
+  margin-right: 15px;
 }
