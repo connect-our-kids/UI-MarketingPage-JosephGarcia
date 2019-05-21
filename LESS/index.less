@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,500&display=swap');
 
 
-@mobile: ~"only screen and (max-width: 500px)";
+@mobile: ~"only screen and (max-width: 800px)";
 
 // Global Vars
 * {
@@ -17,11 +17,11 @@
 	font-family: 'Quicksand', sans-serif;
   }
 
-.container {
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
-}
+// .container {
+// 	max-width: 800px;
+// 	width: 100%;
+// 	margin: 0 auto;
+// }
   
 //Header Component  
 header {
@@ -37,9 +37,10 @@ header {
 	img {
 
 		@media @mobile {
-			position: relative;
-			right: 120px;
-			bottom: 8px;
+			// position: relative;
+			// right: 120px;
+			// bottom: 8px;
+			float: left;
 			width: 50%;
 			height: auto;
 		} 
@@ -62,6 +63,7 @@ header {
 
 			@media @mobile {
 				display: none;
+				margin-top: 90px;
 			}
 		}
 
@@ -72,8 +74,9 @@ header {
 				padding: 14px 16px;
 				text-decoration: none;
 				text-align: center;
-				font-size: 17px;
+				font-size: 35px;
 				display: block;
+				// float: center;
 			}
 			
 
@@ -81,16 +84,6 @@ header {
 			// 	background-color: #ddd;
   			// 	color: black;
 			// }
-
-			i {
-
-				@media @mobile  {
-					position: relative;
-					top: 8px;
-					right: 20px;
-				}
-			
-			}
 		}
 
 		a.icon {
@@ -105,14 +98,24 @@ header {
 				top: 0;
 			} 	
 		}
+
+		// i {
+
+		// 	@media @mobile  {
+		// 		position: relative;
+		// 		top: 20px;
+		// 		right: 35px;
+		// 		font-size: 45px;
+		// 	}
+		
+		// }
 	}
 
 	h1 {
-		margin-top: 5px;
+		margin-top: 30px;
 		color: #14363f;
+		text-align: center;
 	}
-
-
 
 	button {
 		background-color: #008eb6; /* Green */
@@ -126,16 +129,15 @@ header {
 		margin: 4px 2px;
 		cursor: pointer;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
-	}
-	  	
-}
+	}	  	
+} // end header
 
 .content {
 
 
 	@media @mobile {
-		max-width: 440px;
-		width: 100%;
+		// max-width: 440px;
+		width: 90%;
 		margin: 75px auto;
 		color: #14363f;
 		text-align: center;

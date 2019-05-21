@@ -28,23 +28,16 @@ h5,
 p {
   font-family: 'Quicksand', sans-serif;
 }
-.container {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   header img {
-    position: relative;
-    right: 120px;
-    bottom: 8px;
+    float: left;
     width: 50%;
     height: auto;
   }
@@ -52,39 +45,33 @@ p {
 header .topnav {
   margin-top: 30px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   header .topnav {
     overflow: hidden;
     position: relative;
     width: 100%;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   header .topnav #myLinks {
     display: none;
+    margin-top: 90px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   header .topnav a {
     color: #008eb6;
     padding: 14px 16px;
     text-decoration: none;
     text-align: center;
-    font-size: 17px;
+    font-size: 35px;
     display: block;
-  }
-}
-@media only screen and (max-width: 500px) {
-  header .topnav a i {
-    position: relative;
-    top: 8px;
-    right: 20px;
   }
 }
 header .topnav a.icon {
   display: none;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   header .topnav a.icon {
     display: block;
     position: absolute;
@@ -93,8 +80,9 @@ header .topnav a.icon {
   }
 }
 header h1 {
-  margin-top: 5px;
+  margin-top: 30px;
   color: #14363f;
+  text-align: center;
 }
 header button {
   background-color: #008eb6;
@@ -110,10 +98,9 @@ header button {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .content {
-    max-width: 440px;
-    width: 100%;
+    width: 90%;
     margin: 75px auto;
     color: #14363f;
     text-align: center;
@@ -124,7 +111,7 @@ header button {
   padding: 34px 10px;
   border-radius: 10px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .features img {
     left: 0;
     top: 0;
@@ -142,7 +129,7 @@ header button {
   float: left;
   margin-right: 20px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .test .textBox img {
     margin: auto;
     float: none;
