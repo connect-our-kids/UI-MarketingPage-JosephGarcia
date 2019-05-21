@@ -13,7 +13,7 @@
 	padding: 0;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, p {
 	font-family: 'Quicksand', sans-serif;
   }
 
@@ -46,6 +46,8 @@ header {
 	}
 
 	.topnav {
+
+		margin-top: 30px;
 	
 
 		@media @mobile {
@@ -56,16 +58,24 @@ header {
 		} 
 
 		#myLinks {
-			display: none;
+			
+
+			@media @mobile {
+				display: none;
+			}
 		}
 
 		a {
-			color: #008eb6;
-			padding: 14px 16px;
-			text-decoration: none;
-			text-align: center;
-			font-size: 17px;
-			display: block;
+
+			@media @mobile {
+				color: #008eb6;
+				padding: 14px 16px;
+				text-decoration: none;
+				text-align: center;
+				font-size: 17px;
+				display: block;
+			}
+			
 
 			// &:hover {
 			// 	background-color: #ddd;
@@ -73,9 +83,13 @@ header {
 			// }
 
 			i {
-				position: relative;
-				top: 8px;
-				right: 20px;
+
+				@media @mobile  {
+					position: relative;
+					top: 8px;
+					right: 20px;
+				}
+			
 			}
 		}
 
@@ -89,14 +103,8 @@ header {
 				position: absolute;
 				right: 0;
 				top: 0;
-			} 
-			
+			} 	
 		}
-		  
-		// .active {
-		// 	background-color: #4CAF50;
-		// 	color: white;
-		//   }
 	}
 
 	h1 {
@@ -122,11 +130,10 @@ header {
 	  	
 }
 
-//Features Component  
-.features {
+.content {
+
 
 	@media @mobile {
-		// border: 2px solid red;
 		max-width: 440px;
 		width: 100%;
 		margin: 75px auto;
@@ -139,9 +146,12 @@ header {
 		padding: 34px 10px;
 		border-radius: 10px
 	}
+}
+
+//Features Component  
+.features {
 
 	img {
-
 
 		@media @mobile {
 			
@@ -154,26 +164,11 @@ header {
 	}
 }
 
+// Testomonials
 .test {
-
-	@media @mobile {
-		// border: 2px solid red;
-		max-width: 440px;
-		width: 100%;
-		margin: 75px auto;
-		color: #14363f;
-		text-align: center;
-	}
-
-	h2 {
-		background-color: #91b2ce;;
-		padding: 34px 10px;
-		border-radius: 10px
-	}
 
 	.textBox {
 		border: 2px solid #008eb6;
-		// background-color: #eee;
 		border-radius: 5px;
 		padding: 16px;
 		margin: 16px 0;
@@ -201,4 +196,54 @@ header {
 			margin-right: 15px;
 		}
 	}
+}
+
+// Ous Story 
+.ourStory {
+	
+	p {
+		line-height: 30px;
+	}
+
+	a {
+		font-size: 20px;
+	}
+}
+
+//Contact
+.contact {
+
+	.fa {
+		padding: 16px 22px;
+		font-size: 30px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 8px;
+		border-radius: 50%;
+
+		&:hover {
+			opacity: 0.7;
+		}		  
+	}
+
+	.fa-facebook {
+		background: #3B5998;
+		color: white;
+	  }
+
+	  .fa-twitter {
+		background: #55ACEE;
+		color: white;
+	  }
+
+	  .fa-instagram {
+		background: #125688;
+		color: white;
+	  }
+
+	  .fa-linkedin {
+		background: #007bb5;
+		color: white;
+	  }		  
+
 }
