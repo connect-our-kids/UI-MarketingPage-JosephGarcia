@@ -39,15 +39,52 @@ h5 {
     align-items: center;
   }
 }
+@media only screen and (max-width: 500px) {
+  header img {
+    position: relative;
+    right: 120px;
+    bottom: 8px;
+    width: 50%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header .topnav {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+}
+header .topnav #myLinks {
+  display: none;
+}
+header .topnav a {
+  color: #008eb6;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 17px;
+  display: block;
+}
+header .topnav a i {
+  position: relative;
+  top: 8px;
+  right: 20px;
+}
+header .topnav a.icon {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  header .topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
 header h1 {
   margin-top: 5px;
   color: #14363f;
-}
-header img {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
 }
 header button {
   background-color: #008eb6;
@@ -100,8 +137,7 @@ header button {
   border-radius: 10px;
 }
 .test .textBox {
-  border: 2px solid #ccc;
-  background-color: #eee;
+  border: 2px solid #008eb6;
   border-radius: 5px;
   padding: 16px;
   margin: 16px 0;
