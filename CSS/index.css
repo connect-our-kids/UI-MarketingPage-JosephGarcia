@@ -35,6 +35,24 @@ p {
     align-items: center;
   }
 }
+header .contButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+header .contButtons button {
+  width: 265px;
+  height: fit-content;
+}
+@media only screen and (max-width: 800px) {
+  header .contButtons button {
+    display: none;
+  }
+}
+header img {
+  width: 100%;
+}
 @media only screen and (max-width: 800px) {
   header img {
     float: left;
@@ -52,11 +70,24 @@ header .topnav {
     width: 100%;
   }
 }
+header .topnav .contButtons {
+  justify-content: space-around;
+}
+header .topnav #myLinks {
+  margin-top: 25px;
+  text-align: center;
+}
 @media only screen and (max-width: 800px) {
   header .topnav #myLinks {
     display: none;
     margin-top: 90px;
   }
+}
+header .topnav a {
+  font-size: 35px;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: #008eb6;
 }
 @media only screen and (max-width: 800px) {
   header .topnav a {
@@ -83,6 +114,7 @@ header h1 {
   margin-top: 30px;
   color: #14363f;
   text-align: center;
+  padding-right: 40px;
 }
 header button {
   background-color: #008eb6;
@@ -98,6 +130,11 @@ header button {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
 }
+.content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
 @media only screen and (max-width: 800px) {
   .content {
     width: 90%;
@@ -110,6 +147,15 @@ header button {
   background-color: #91b2ce;
   padding: 34px 10px;
   border-radius: 10px;
+  margin-top: 40px;
+}
+.features .test {
+  display: flex;
+  flex-wrap: wrap;
+}
+.features .test .y {
+  width: 50%;
+  padding: 0px 56px;
 }
 @media only screen and (max-width: 800px) {
   .features img {
@@ -118,6 +164,11 @@ header button {
     width: 100%;
     height: auto;
   }
+}
+.test {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .test .textBox {
   border: 2px solid #008eb6;
@@ -145,6 +196,9 @@ header button {
 }
 .ourStory a {
   font-size: 20px;
+}
+.contact {
+  text-align: center;
 }
 .contact .fa {
   padding: 16px 22px;

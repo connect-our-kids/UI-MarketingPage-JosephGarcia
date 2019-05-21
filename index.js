@@ -16,3 +16,18 @@ function myFunction() {
 		console.log('opening');
 	}
   }
+
+function buttonTextAnimation() {
+	let buttonText = document.querySelector('header h1')
+	TweenMax.to(buttonText, 1, {
+		opacity: 0,
+		scale: 0,
+		rotation: 580,
+		// ease: Bounce.easeIn,
+		repeat: -1,
+		yoyo: true, 
+		repeatDelay: 1
+	});
+}  
+
+buttonTextAnimation()
