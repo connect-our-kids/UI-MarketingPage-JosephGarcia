@@ -156,6 +156,14 @@ h5,
 p {
   font-family: 'Quicksand', sans-serif;
 }
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.2rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 @media only screen and (max-width: 800px) {
   header {
     display: flex;
@@ -200,8 +208,16 @@ header .topnav .contButtons button {
   margin: 4px 2px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
+  color: #008eb6;
+  border-color: #008eb6;
+  background-color: #FFFFFF;
   width: 265px;
   height: fit-content;
+}
+header .topnav .contButtons button:hover {
+  background-color: #008eb6;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 @media only screen and (max-width: 800px) {
   header .topnav .contButtons button {
@@ -212,25 +228,18 @@ header .topnav #myLinks {
   margin-top: 25px;
   text-align: center;
 }
-@media only screen and (max-width: 800px) {
-  header .topnav #myLinks {
-    height: 0;
-    margin-top: 0 auto;
-    transition: all 1s;
-  }
-  header .topnav #myLinks.active {
-    height: 100vh;
-    transition: all 1s;
-  }
-}
-header .topnav a {
+header .topnav #myLinks a {
   font-size: 35px;
   text-decoration: none;
   padding: 14px 16px;
   color: #008eb6;
 }
+header .topnav #myLinks a:hover {
+  background-color: #008eb6;
+  color: white;
+}
 @media only screen and (max-width: 800px) {
-  header .topnav a {
+  header .topnav #myLinks a {
     color: #008eb6;
     padding: 14px 16px;
     text-decoration: none;
@@ -239,11 +248,25 @@ header .topnav a {
     display: block;
   }
 }
+@media only screen and (max-width: 800px) {
+  header .topnav #myLinks {
+    height: 0;
+    margin-top: 0 auto;
+    transition: all 1s;
+  }
+  header .topnav #myLinks.active {
+    height: 300px;
+    transition: all 1s;
+  }
+}
 header .topnav .icon {
   display: none;
 }
 @media only screen and (max-width: 800px) {
   header .topnav .icon {
+    font-size: 2rem;
+    padding: 14px 16px;
+    color: #008eb6;
     display: block;
     position: absolute;
     right: 0;
@@ -289,6 +312,11 @@ header .contButtons button {
   width: 265px;
   height: fit-content;
 }
+header .contButtons button:hover {
+  background-color: #FFFFFF;
+  color: #008eb6;
+  border-color: #008eb6;
+}
 .content {
   max-width: 1000px;
   width: 100%;
@@ -303,12 +331,15 @@ header .contButtons button {
   }
 }
 .content h2 {
-  background-color: #008eb6;
+  background: rgba(0, 142, 182, 0.5);
   padding: 34px 10px;
   border-radius: 10px;
   margin: 40px 10px;
   color: white;
   text-align: center;
+}
+.content h2:hover {
+  background-color: #008eb6;
 }
 .features .test {
   display: flex;
@@ -360,17 +391,48 @@ header .contButtons button {
   }
 }
 .test .textBox span {
-  font-size: 20px;
+  font-size: 1.8rem;
   margin-right: 15px;
+}
+.test .textBox .title {
+  font-size: 1.3rem;
+  color: #008eb6;
+}
+.test .textBox blockquote {
+  color: gray;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .test .textBox blockquote {
+    position: relative;
+    border-left: 0.2em solid #00b6e9;
+    font-size: 2.2em;
+    line-height: 1.5em;
+    font-weight: 100;
+    padding-left: 0.6rem;
+    margin-left: 0px;
+  }
+  .test .textBox blockquote:before,
+  .test .textBox blockquote:after {
+    content: '\201C';
+  }
+  .test .textBox blockquote:after {
+    content: '\201D';
+  }
 }
 .ourStory {
   padding: 0 25px;
 }
 .ourStory p {
-  line-height: 30px;
+  line-height: 3rem;
+}
+@media only screen and (max-width: 800px) {
+  .ourStory p {
+    text-align: left;
+  }
 }
 .ourStory a {
-  font-size: 20px;
+  font-size: 2rem;
 }
 .contact {
   text-align: center;

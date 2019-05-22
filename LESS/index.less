@@ -5,6 +5,7 @@
 
 @mobile: ~"only screen and (max-width: 800px)";
 
+// Mixins
 .button() {
 	background-color: #008eb6; /* Green */
 	border: 2px solid white;
@@ -18,6 +19,22 @@
 	cursor: pointer;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }
+
+// Color assignments 
+@font-color: @shark;
+@button-bg: @eastern-blue;
+@main-bg:  @white;
+@navigation-border: @silver;
+@footer-bg: @sandy-beach;
+@mainColor: @blueish;
+
+// Colors
+@white: #FFFFFF;
+@silver: #C0C0C0;
+@shark: #212529;
+@eastern-blue: #17A2B8;
+@sandy-beach: #FFEBCD;
+@blueish: #008eb6;
 
 // Global Vars
 * {
@@ -33,6 +50,17 @@
 	font-family: 'Quicksand', sans-serif;
   }
 
+  h2 {
+	font-size: 2rem;
+  }
+
+  p {
+	font-size: 1.2rem;
+	// line-height: 1rem;
+	margin-top: 1em;
+	margin-bottom: 1em;
+  }
+
 // .container {
 // 	max-width: 900px;
 // 	width: 100%;
@@ -41,8 +69,6 @@
   
 //Header Component  
 header {
-
-	// border: red solid 2px;
 
 	@media @mobile {
 		display: flex;
@@ -74,11 +100,7 @@ header {
 				width: 100%;
 		
 				@media @mobile {
-					// position: relative;
-					// right: 120px;
-					// bottom: 8px;
 					float: left;
-					// width: 50%;
 					height: auto;
 				} 
 			}
@@ -86,8 +108,18 @@ header {
 			button {
 
 				.button();
+				// background-color: white;
+				color: @mainColor;
+				border-color: @mainColor;
+				background-color: @white;
 				width: 265px;
 				height: fit-content;
+
+				&:hover {
+					background-color: @mainColor;
+					color: @white;
+					border-color: @white
+				}
 
 				@media @mobile {
 					display: none;
@@ -100,6 +132,28 @@ header {
 			margin-top: 25px;
 			text-align: center;
 
+			a {
+				font-size: 35px;
+				text-decoration: none;
+				padding: 14px 16px;
+				color: #008eb6;
+	
+					&:hover {
+					background-color: #008eb6;
+					  color: white;
+				}				
+	
+				@media @mobile {
+					color: #008eb6;
+					padding: 14px 16px;
+					text-decoration: none;
+					text-align: center;
+					font-size: 35px;
+					display: block;
+					// float: center;
+				}		
+			}
+
 			@media @mobile {
 				height: 0;
 				margin-top: 0 auto;
@@ -107,59 +161,25 @@ header {
 				
 				&.active {
 					// position: absolute;
-					height: 100vh;
+					height: 300px;
 					transition: all 1s;
 				}
 			}			
-		}
-
-		a {
-			font-size: 35px;
-			text-decoration: none;
-			padding: 14px 16px;
-			color: #008eb6;
-			
-
-			@media @mobile {
-				color: #008eb6;
-				padding: 14px 16px;
-				text-decoration: none;
-				text-align: center;
-				font-size: 35px;
-				display: block;
-				// float: center;
-			}
-			
-
-			// &:hover {
-			// 	background-color: #ddd;
-  			// 	color: black;
-			// }
 		}
 
 		.icon {
 			display: none;
 
 			@media @mobile {
-				// background: lightblue;
-				
+				font-size: 2rem;
+				padding: 14px 16px;
+				color: @mainColor;
 				display: block;
 				position: absolute;
 				right: 0;
 				top: 0;
 			} 	
 		}
-
-		// i {
-
-		// 	@media @mobile  {
-		// 		position: relative;
-		// 		top: 20px;
-		// 		right: 35px;
-		// 		font-size: 45px;
-		// 	}
-		
-		// }
 	}	
 
 	.contButtons {
@@ -190,8 +210,14 @@ header {
 				.button();
 				width: 265px;
 				height: fit-content;
+
+				&:hover {
+					background-color: @white;
+					color: @mainColor;
+					border-color: @mainColor;
+				}
 			}
-		}	
+	}	
 
 } // end header
 
@@ -210,12 +236,16 @@ header {
 	}
 
 	h2 {
-		background-color: #008eb6;;
+		background: rgba(0, 142, 182, 0.5);
 		padding: 34px 10px;
 		border-radius: 10px;
 		margin: 40px 10px;
 		color: white;
 		text-align: center;
+
+		&:hover {
+			background-color: @mainColor;
+		}
 	}
 }
 
@@ -270,12 +300,6 @@ header {
 		padding: 16px;
 		margin: 16px 0;
 
-		// &:after {
-		// 	content: "";
-		// 	clear: both;
-		// 	display: table;
-		// }
-
 		img {
 			float: left;
 			margin-right: 20px;
@@ -289,9 +313,41 @@ header {
 		}
 
 		span {
-			font-size: 20px;
+			font-size: 1.8rem;
 			margin-right: 15px;
 		}
+
+		.title {
+			font-size: 1.3rem;
+			color: @mainColor;
+		}
+
+		blockquote {
+
+			color: gray;
+			font-size: 1rem;
+			// line-height: 1.5em;
+			// margin-left: 109px;
+
+			@media @mobile {
+				position: relative;
+				border-left: 0.2em solid lighten(@mainColor, 10%);
+				font-size: 2.2em;
+				line-height: 1.5em;
+				font-weight: 100;
+				padding-left: 0.6rem;
+				margin-left: 0px;
+				
+				&:before, &:after {
+					content: '\201C';      
+				}
+				
+				&:after {
+					content: '\201D';
+				}
+			}
+		}			   
+		
 	}
 }
 
@@ -301,11 +357,15 @@ header {
 	padding: 0 25px;
 
 	p {
-		line-height: 30px;
+		line-height: 3rem;
+
+		@media @mobile {
+			text-align: left;
+		}
 	}
 
 	a {
-		font-size: 20px;
+		font-size: 2rem;
 	}
 }
 
