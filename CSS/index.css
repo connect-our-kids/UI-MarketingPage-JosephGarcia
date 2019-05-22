@@ -1,3 +1,131 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 @font-face {
   font-family: 'Quicksand';
   font-style: normal;
@@ -35,31 +163,6 @@ p {
     align-items: center;
   }
 }
-header .contButtons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-}
-header .contButtons button {
-  width: 265px;
-  height: fit-content;
-}
-@media only screen and (max-width: 800px) {
-  header .contButtons button {
-    display: none;
-  }
-}
-header img {
-  width: 100%;
-}
-@media only screen and (max-width: 800px) {
-  header img {
-    float: left;
-    width: 50%;
-    height: auto;
-  }
-}
 header .topnav {
   margin-top: 30px;
 }
@@ -72,6 +175,38 @@ header .topnav {
 }
 header .topnav .contButtons {
   justify-content: space-around;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+header .topnav .contButtons img {
+  width: 100%;
+}
+@media only screen and (max-width: 800px) {
+  header .topnav .contButtons img {
+    float: left;
+    height: auto;
+  }
+}
+header .topnav .contButtons button {
+  background-color: #008eb6;
+  /* Green */
+  border: 2px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
+  width: 265px;
+  height: fit-content;
+}
+@media only screen and (max-width: 800px) {
+  header .topnav .contButtons button {
+    display: none;
+  }
 }
 header .topnav #myLinks {
   margin-top: 25px;
@@ -79,8 +214,13 @@ header .topnav #myLinks {
 }
 @media only screen and (max-width: 800px) {
   header .topnav #myLinks {
-    display: none;
-    margin-top: 90px;
+    height: 0;
+    margin-top: 0 auto;
+    transition: all 1s;
+  }
+  header .topnav #myLinks.active {
+    height: 100vh;
+    transition: all 1s;
   }
 }
 header .topnav a {
@@ -99,24 +239,42 @@ header .topnav a {
     display: block;
   }
 }
-header .topnav a.icon {
+header .topnav .icon {
   display: none;
 }
 @media only screen and (max-width: 800px) {
-  header .topnav a.icon {
+  header .topnav .icon {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
   }
 }
-header h1 {
-  margin-top: 30px;
-  color: #14363f;
+header .contButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 40px;
+}
+header .contButtons h1 {
+  color: red;
   text-align: center;
   padding-right: 40px;
+  font-size: 2.5rem;
 }
-header button {
+@media only screen and (max-width: 800px) {
+  header .contButtons h1 {
+    padding-right: 0px;
+    margin: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  header .contButtons {
+    flex-direction: column;
+  }
+}
+header .contButtons button {
   background-color: #008eb6;
   /* Green */
   border: 2px solid white;
@@ -124,11 +282,12 @@ header button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 25px;
   margin: 4px 2px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
+  width: 265px;
+  height: fit-content;
 }
 .content {
   max-width: 1000px;
@@ -144,18 +303,31 @@ header button {
   }
 }
 .content h2 {
-  background-color: #91b2ce;
+  background-color: #008eb6;
   padding: 34px 10px;
   border-radius: 10px;
-  margin-top: 40px;
+  margin: 40px 10px;
+  color: white;
+  text-align: center;
 }
 .features .test {
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 800px) {
+  .features .test {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .features .test .y {
   width: 50%;
   padding: 0px 56px;
+}
+@media only screen and (max-width: 800px) {
+  .features .test .y {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 800px) {
   .features img {
@@ -168,7 +340,7 @@ header button {
 .test {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .test .textBox {
   border: 2px solid #008eb6;
@@ -191,6 +363,9 @@ header button {
   font-size: 20px;
   margin-right: 15px;
 }
+.ourStory {
+  padding: 0 25px;
+}
 .ourStory p {
   line-height: 30px;
 }
@@ -200,30 +375,34 @@ header button {
 .contact {
   text-align: center;
 }
-.contact .fa {
-  padding: 16px 22px;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 8px;
+.contact .iconContainer {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  display: inline-block;
+  margin: 0.8rem;
 }
-.contact .fa:hover {
+.contact .iconContainer .fa {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  padding: 0;
+}
+.contact .iconContainer .fa:hover {
   opacity: 0.7;
 }
-.contact .fa-facebook {
+.contact .facebook {
   background: #3B5998;
   color: white;
 }
-.contact .fa-twitter {
+.contact .twitter {
   background: #55ACEE;
   color: white;
 }
-.contact .fa-instagram {
+.contact .instagram {
   background: #125688;
   color: white;
 }
-.contact .fa-linkedin {
+.contact .linkedin {
   background: #007bb5;
   color: white;
 }
