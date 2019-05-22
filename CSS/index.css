@@ -147,6 +147,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -341,22 +342,23 @@ header .contButtons button:hover {
 .content h2:hover {
   background-color: #008eb6;
 }
-.features .test {
+.features .featuresBox {
   display: flex;
   flex-wrap: wrap;
 }
 @media only screen and (max-width: 800px) {
-  .features .test {
+  .features .featuresBox {
     flex-direction: column;
     align-items: center;
   }
 }
-.features .test .y {
+.features .featuresBox .y {
   width: 50%;
-  padding: 0px 56px;
+  padding: 34px 56px;
+  margin-bottom: 100px;
 }
 @media only screen and (max-width: 800px) {
-  .features .test .y {
+  .features .featuresBox .y {
     width: 100%;
   }
 }
@@ -379,6 +381,11 @@ header .contButtons button:hover {
   padding: 16px;
   margin: 16px 0;
 }
+@media only screen and (max-width: 800px) {
+  .test .textBox p {
+    margin-bottom: 70px;
+  }
+}
 .test .textBox img {
   float: left;
   margin-right: 20px;
@@ -393,6 +400,11 @@ header .contButtons button:hover {
 .test .textBox span {
   font-size: 1.8rem;
   margin-right: 15px;
+}
+@media only screen and (max-width: 800px) {
+  .test .textBox span {
+    display: block;
+  }
 }
 .test .textBox .title {
   font-size: 1.3rem;

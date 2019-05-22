@@ -44,6 +44,7 @@
   html, body {
 	margin: 0; 
 	padding: 0;
+	scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, p {
@@ -252,9 +253,10 @@ header {
 //Features Component  
 .features {
 
-	.test {
+	.featuresBox {
 		display: flex;
 		flex-wrap: wrap;
+		// padding-bottom: 100px;
 
 		@media @mobile {
 		
@@ -264,7 +266,8 @@ header {
 
 		.y {
 			width: 50%;
-			padding: 0px 56px;
+			padding: 34px 56px;
+			margin-bottom: 100px;
 
 			@media @mobile {
 	
@@ -300,6 +303,13 @@ header {
 		padding: 16px;
 		margin: 16px 0;
 
+		p {
+
+			@media @mobile {
+			margin-bottom: 70px;
+			}
+		}
+
 		img {
 			float: left;
 			margin-right: 20px;
@@ -315,6 +325,11 @@ header {
 		span {
 			font-size: 1.8rem;
 			margin-right: 15px;
+			// display: block;
+
+			@media @mobile {
+				display: block;
+			}
 		}
 
 		.title {
