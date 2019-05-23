@@ -1,0 +1,160 @@
+
+
+//Header Component  
+header {
+
+	@media @mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// height: 100vh;
+	}
+
+	.topnav {
+
+		margin-top: 30px;
+	
+
+		@media @mobile {
+			overflow: hidden;
+			// background-color: #333;
+			position: relative;
+			width: 100%;
+		}
+
+		.contButtons {
+			justify-content: space-around;
+			display: flex;
+			align-items: center;
+			margin-top: 40px;
+
+			img {
+
+				width: 100%;
+		
+				@media @mobile {
+					float: left;
+					height: auto;
+				} 
+			}
+
+			button {
+
+				.button();
+				// background-color: white;
+				color: @mainColor;
+				border-color: @mainColor;
+				background-color: @white;
+				width: 265px;
+				height: fit-content;
+
+				&:hover {
+					background-color: @mainColor;
+					color: @white;
+					border-color: @white
+				}
+
+				@media @mobile {
+					display: none;
+				}
+			}
+		}
+		
+		#myLinks {
+			
+			margin-top: 25px;
+			text-align: center;
+
+			a {
+				font-size: 35px;
+				text-decoration: none;
+				padding: 14px 16px;
+				color: #008eb6;
+	
+					&:hover {
+					background-color: #008eb6;
+					  color: white;
+				}				
+	
+				@media @mobile {
+					color: #008eb6;
+					padding: 14px 16px;
+					text-decoration: none;
+					text-align: center;
+					font-size: 35px;
+					display: block;
+					// float: center;
+				}		
+			}
+
+			@media @mobile {
+				height: 0;
+				margin-top: 0 auto;
+				transition: all 1s;
+				
+				&.active {
+					// position: absolute;
+					height: 300px;
+					transition: all 1s;
+				}
+			}			
+		}
+
+		.icon {
+			display: none;
+
+			@media @mobile {
+				font-size: 2rem;
+				padding: 14px 16px;
+				color: @mainColor;
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+			} 	
+		}
+	}	
+
+	.contButtons {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		margin-top: 40px;
+
+		@media @mobile {
+			flex-direction: column;
+			align-items: center;		
+		}
+
+		p {
+			margin-top: .5rem;
+			color: @mainColor
+		}
+
+		h1 {
+			color: red;
+			text-align: center;
+			padding-right: 40px;
+			font-size: 2.5rem;
+
+			@media @mobile {
+				padding-right: 0px;
+				margin: 2rem;
+			}
+		}	
+
+		button {
+
+			.button();
+				width: 265px;
+				height: fit-content;
+
+			&:hover {
+				background-color: @white;
+				color: @mainColor;
+				border-color: @mainColor;
+			}
+		}
+	}	
+
+} // end header

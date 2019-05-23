@@ -126,6 +126,45 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: 'Quicksand', sans-serif;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.2rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Quicksand Light'), local('Quicksand-Light'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pgHYYT8L6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Quicksand Medium'), local('Quicksand-Medium'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_p2HcYT8L6.ttf) format('truetype');
+}
 .rome .romebox {
   padding: 2px 16px;
   display: flex;
@@ -244,45 +283,6 @@ table {
   content: "";
   display: table;
   clear: both;
-}
-@font-face {
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Quicksand Light'), local('Quicksand-Light'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pgHYYT8L6.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local('Quicksand Medium'), local('Quicksand-Medium'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_p2HcYT8L6.ttf) format('truetype');
-}
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  font-family: 'Quicksand', sans-serif;
-}
-h2 {
-  font-size: 2rem;
-}
-p {
-  font-size: 1.2rem;
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 @media only screen and (max-width: 800px) {
   header {
@@ -470,7 +470,7 @@ header .contButtons button:hover {
   font-size: 2rem;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 90px;
   z-index: 99;
   display: none;
   cursor: pointer;
@@ -481,6 +481,7 @@ header .contButtons button:hover {
 @media only screen and (max-width: 800px) {
   .content .far {
     font-size: 3rem;
+    right: 2px;
   }
 }
 .features .featuresBox {

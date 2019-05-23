@@ -1,0 +1,186 @@
+//Features Component  
+.features {
+
+	.featuresBox {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media @mobile {
+		
+			flex-direction: column;
+    		align-items: center;
+		}
+
+		.y {
+			width: 50%;
+			padding: 34px 56px;
+			margin-bottom: 100px;
+
+			@media @mobile {
+	
+				width: 100%;			
+			}
+		}
+
+		h3 {
+			margin-bottom: 1.5rem;
+			text-align: center;
+		}
+	}
+
+	img {
+
+			
+		@media @mobile {
+			
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: auto;
+						
+		}
+	}
+}
+
+// Testomonials
+.test {
+
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+	.textBox {
+		border: 2px solid #008eb6;
+		border-radius: 5px;
+		padding: 16px;
+		margin: 16px 0;
+		width: 45%;
+
+		@media @mobile {
+			width: 100%;
+		}
+
+		p {
+
+			@media @mobile {
+			margin-bottom: 70px;
+			}
+		}
+
+		img {
+			float: left;
+			margin-right: 20px;
+			border-radius: 50%;
+
+			@media @mobile {
+				margin: auto;
+				float: none;
+				display: block;
+			}
+			  
+		}
+
+		span {
+			font-size: 1.8rem;
+			margin-right: 15px;
+			display: block;
+		}
+
+		.title {
+			font-size: 1.3rem;
+			color: @mainColor;
+		}
+
+		blockquote {
+
+		    color: gray;
+			font-size: 1rem;
+			width: 50%;
+			margin-top: 2.5rem;
+			margin-left: 110px;
+
+			&:before, &:after {
+				content: '\201C';      
+			}
+			
+			&:after {
+				content: '\201D';
+			}
+
+			@media @mobile {
+				position: relative;
+				border-left: 0.2em solid lighten(@mainColor, 10%);
+				font-size: 2.2em;
+				line-height: 1.5em;
+				font-weight: 100;
+				padding-left: 0.6rem;
+				margin-left: 0px;
+				width: 100%;
+			}
+		}			   
+		
+	}
+}
+
+// Ous Story 
+.ourStory {
+	
+	padding: 0 25px;
+
+	p {
+		line-height: 3rem;
+
+		@media @mobile {
+			text-align: left;
+		}
+	}
+
+	a {
+		font-size: 2rem;
+	}
+}
+
+//Contact
+.contact {
+
+	text-align: center;
+
+	.iconContainer {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: inline-block;
+		margin: .8rem;
+
+
+		.fab {
+			margin-top: .5rem;
+			font-size: 2rem;
+			padding: 0;
+
+			&:hover {
+				opacity: 0.7;
+			}		  
+		}
+	}
+
+	.facebook {
+		background: #3B5998;
+		color: white;
+	}
+
+	.twitter {
+		background: #55ACEE;
+		color: white;
+	}
+
+	.instagram {
+		background: #125688;
+		color: white;
+	}
+
+	.linkedin {
+		background: #007bb5;
+		color: white;
+	}	
+}
