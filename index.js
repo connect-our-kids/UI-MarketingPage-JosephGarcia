@@ -9,16 +9,17 @@ function buttonTextAnimation() {
 	let buttonText = document.querySelector('header h1')
 	TweenMax.to(buttonText, 1, {
 		opacity: 0,
-		scale: 0,
-		rotation: 580,
-		// ease: Bounce.easeIn,
+		// scale: 0,
+		// rotation: 580,
+		ease: Bounce.easeIn,
 		repeat: 3,
 		yoyo: true, 
-		repeatDelay: 1
+		repeatDelay: 1,
+		x: -500
 	});
 }  
 
-buttonTextAnimation()
+// buttonTextAnimation()
 
 
 let up = document.querySelector('.far')
