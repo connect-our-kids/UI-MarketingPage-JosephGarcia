@@ -38,24 +38,26 @@ header {
 				} 
 			}
 
-			button {
+			a {
 
-				.button();
-				// background-color: white;
-				color: @mainColor;
-				border-color: @mainColor;
-				background-color: @white;
-				width: 265px;
-				height: fit-content;
+				button {
 
-				&:hover {
-					background-color: @mainColor;
-					color: @white;
-					border-color: @white
-				}
-
-				@media @mobile {
-					display: none;
+					.button();
+					color: @mainColor;
+					border-color: @mainColor;
+					background-color: @white;
+					width: 265px;
+					height: 3.8rem;
+	
+					&:hover {
+						background-color: @mainColor;
+						color: @white;
+						border-color: @white
+					}
+	
+					@media @mobile {
+						display: none;
+					}
 				}
 			}
 		}
@@ -147,7 +149,7 @@ header {
 
 			.button();
 				width: 265px;
-				height: fit-content;
+				height: 3.8rem;
 
 			&:hover {
 				background-color: @white;

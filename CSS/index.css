@@ -316,7 +316,7 @@ header .topnav .contButtons img {
     height: auto;
   }
 }
-header .topnav .contButtons button {
+header .topnav .contButtons a button {
   background-color: #008eb6;
   /* Green */
   border: 2px solid white;
@@ -332,15 +332,15 @@ header .topnav .contButtons button {
   border-color: #008eb6;
   background-color: #FFFFFF;
   width: 265px;
-  height: fit-content;
+  height: 3.8rem;
 }
-header .topnav .contButtons button:hover {
+header .topnav .contButtons a button:hover {
   background-color: #008eb6;
   color: #FFFFFF;
   border-color: #FFFFFF;
 }
 @media only screen and (max-width: 800px) {
-  header .topnav .contButtons button {
+  header .topnav .contButtons a button {
     display: none;
   }
 }
@@ -434,7 +434,7 @@ header .contButtons button {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
   width: 265px;
-  height: fit-content;
+  height: 3.8rem;
 }
 header .contButtons button:hover {
   background-color: #FFFFFF;
