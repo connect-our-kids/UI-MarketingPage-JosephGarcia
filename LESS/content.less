@@ -26,7 +26,10 @@ h2 {
 }
 
 .far {
-	color: @mainColor;
+	color: white;
+	background-color: @mainColor;
+	padding: 1rem;
+	border-radius: 50%;
 	font-size: 2rem;
 	position: fixed;
 	bottom: 20px;
@@ -42,6 +45,8 @@ h2 {
 	@media @mobile {
 		font-size: 3rem;
 		right: 2px;
+		background-color: transparent;
+		color: @mainColor;
 	}
 }
 }

@@ -12,13 +12,13 @@ function buttonTextAnimation() {
 		scale: 0,
 		rotation: 580,
 		// ease: Bounce.easeIn,
-		repeat: -1,
+		repeat: 3,
 		yoyo: true, 
 		repeatDelay: 1
 	});
 }  
 
-// buttonTextAnimation()
+buttonTextAnimation()
 
 
 let up = document.querySelector('.far')

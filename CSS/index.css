@@ -318,7 +318,6 @@ header .topnav .contButtons img {
 }
 header .topnav .contButtons a button {
   background-color: #008eb6;
-  /* Green */
   border: 2px solid white;
   color: white;
   padding: 15px 32px;
@@ -357,6 +356,7 @@ header .topnav #myLinks a {
 header .topnav #myLinks a:hover {
   background-color: #008eb6;
   color: white;
+  border-radius: 5%;
 }
 @media only screen and (max-width: 800px) {
   header .topnav #myLinks a {
@@ -423,7 +423,6 @@ header .contButtons h1 {
 }
 header .contButtons button {
   background-color: #008eb6;
-  /* Green */
   border: 2px solid white;
   color: white;
   padding: 15px 32px;
@@ -466,7 +465,10 @@ header .contButtons button:hover {
   background-color: #008eb6;
 }
 .content .far {
-  color: #008eb6;
+  color: white;
+  background-color: #008eb6;
+  padding: 1rem;
+  border-radius: 50%;
   font-size: 2rem;
   position: fixed;
   bottom: 20px;
@@ -482,6 +484,8 @@ header .contButtons button:hover {
   .content .far {
     font-size: 3rem;
     right: 2px;
+    background-color: transparent;
+    color: #008eb6;
   }
 }
 .features .featuresBox {
