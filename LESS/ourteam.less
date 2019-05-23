@@ -57,6 +57,12 @@
 		.heading {
 			font-size: 1.8rem;
 			margin-right: 25px;
+
+			@media @mobile {
+				display: block;
+				margin-bottom: 1rem;
+				font-size: 3rem;
+			}
 		}
 
 		hr {
@@ -69,6 +75,12 @@
 
 		.checked {
 			color: orange;
+			
+
+			@media @mobile {
+				padding: .5rem;
+				// font-size: 3rem;
+			}
 		}
 
 		.row {
