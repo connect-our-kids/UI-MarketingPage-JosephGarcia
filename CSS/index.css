@@ -507,6 +507,12 @@ header .contButtons button:hover {
   border-radius: 5px;
   padding: 16px;
   margin: 16px 0;
+  width: 45%;
+}
+@media only screen and (max-width: 800px) {
+  .test .textBox {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 800px) {
   .test .textBox p {
@@ -516,6 +522,7 @@ header .contButtons button:hover {
 .test .textBox img {
   float: left;
   margin-right: 20px;
+  border-radius: 50%;
 }
 @media only screen and (max-width: 800px) {
   .test .textBox img {
@@ -527,11 +534,7 @@ header .contButtons button:hover {
 .test .textBox span {
   font-size: 1.8rem;
   margin-right: 15px;
-}
-@media only screen and (max-width: 800px) {
-  .test .textBox span {
-    display: block;
-  }
+  display: block;
 }
 .test .textBox .title {
   font-size: 1.3rem;
@@ -540,6 +543,16 @@ header .contButtons button:hover {
 .test .textBox blockquote {
   color: gray;
   font-size: 1rem;
+  width: 50%;
+  margin-top: 2.5rem;
+  margin-left: 110px;
+}
+.test .textBox blockquote:before,
+.test .textBox blockquote:after {
+  content: '\201C';
+}
+.test .textBox blockquote:after {
+  content: '\201D';
 }
 @media only screen and (max-width: 800px) {
   .test .textBox blockquote {
@@ -550,13 +563,7 @@ header .contButtons button:hover {
     font-weight: 100;
     padding-left: 0.6rem;
     margin-left: 0px;
-  }
-  .test .textBox blockquote:before,
-  .test .textBox blockquote:after {
-    content: '\201C';
-  }
-  .test .textBox blockquote:after {
-    content: '\201D';
+    width: 100%;
   }
 }
 .ourStory {

@@ -313,6 +313,11 @@ header {
 		border-radius: 5px;
 		padding: 16px;
 		margin: 16px 0;
+		width: 45%;
+
+		@media @mobile {
+			width: 100%;
+		}
 
 		p {
 
@@ -324,6 +329,7 @@ header {
 		img {
 			float: left;
 			margin-right: 20px;
+			border-radius: 50%;
 
 			@media @mobile {
 				margin: auto;
@@ -336,11 +342,12 @@ header {
 		span {
 			font-size: 1.8rem;
 			margin-right: 15px;
-			// display: block;
+			display: block;
+			// margin-top: .5rem;
 
-			@media @mobile {
-				display: block;
-			}
+			// @media @mobile {
+			// 	display: block;
+			// }
 		}
 
 		.title {
@@ -350,10 +357,19 @@ header {
 
 		blockquote {
 
-			color: gray;
+		    color: gray;
 			font-size: 1rem;
-			// line-height: 1.5em;
-			// margin-left: 109px;
+			width: 50%;
+			margin-top: 2.5rem;
+			margin-left: 110px;
+
+			&:before, &:after {
+				content: '\201C';      
+			}
+			
+			&:after {
+				content: '\201D';
+			}
 
 			@media @mobile {
 				position: relative;
@@ -363,14 +379,7 @@ header {
 				font-weight: 100;
 				padding-left: 0.6rem;
 				margin-left: 0px;
-				
-				&:before, &:after {
-					content: '\201C';      
-				}
-				
-				&:after {
-					content: '\201D';
-				}
+				width: 100%;
 			}
 		}			   
 		
