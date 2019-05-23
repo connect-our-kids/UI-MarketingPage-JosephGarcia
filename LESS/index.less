@@ -254,6 +254,25 @@ header {
 			background-color: @mainColor;
 		}
 	}
+
+	.far {
+		color: @mainColor;
+		font-size: 2rem;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		display: none;
+		cursor: pointer;
+
+		&:hover {
+			color: red;
+		}
+
+		@media @mobile {
+			font-size: 3rem;
+		}
+	}
 }
 
 //Features Component  
@@ -425,7 +444,7 @@ header {
 		// position: relative;
 
 
-		.fa {
+		.fab {
 			margin-top: .5rem;
 			font-size: 2rem;
 			padding: 0;
