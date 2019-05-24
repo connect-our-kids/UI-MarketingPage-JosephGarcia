@@ -1,0 +1,52 @@
+.content {
+
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+
+@media @mobile {
+	// max-width: 440px;
+	width: 90%;
+	margin: 75px auto;
+	color: #14363f;
+	text-align: center;
+}
+
+h2 {
+	background: rgba(0, 142, 182, 0.5);
+	padding: 34px 10px;
+	border-radius: 10px;
+	margin: 40px 10px;
+	color: white;
+	text-align: center;
+
+	&:hover {
+		background-color: @mainColor;
+	}
+}
+
+.far {
+	color: white;
+	background-color: @mainColor;
+	padding: 1rem;
+	border-radius: 50%;
+	font-size: 2rem;
+	position: fixed;
+	bottom: 20px;
+	right: 90px;
+	z-index: 99;
+	display: none;
+	cursor: pointer;
+
+	&:hover {
+		color: red;
+	}
+
+	@media @mobile {
+		font-size: 3rem;
+		right: 2px;
+		background-color: transparent;
+		color: @mainColor;
+	}
+}
+}
