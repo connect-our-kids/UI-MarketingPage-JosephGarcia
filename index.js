@@ -1,10 +1,11 @@
+// Drop Down Menu
 function myFunction() {
 	var x = document.getElementById("myLinks");
 
 		x.classList.toggle('active')
+}
 
-  }
-
+//H1 text Animation
 function buttonTextAnimation() {
 	let buttonText = document.querySelector('header h1')
 	TweenMax.from(buttonText, 1.5, {
@@ -14,7 +15,8 @@ function buttonTextAnimation() {
 		ease: Bounce.easeOut,
 		// repeat: 1,
 		// yoyo: true, 
-		repeatDelay: 1,
+		repeatDelay: 3,
+		delay: 1.5,
 		x: -1000
 	});
 }  
@@ -22,11 +24,13 @@ function buttonTextAnimation() {
 buttonTextAnimation()
 
 
+
 let up = document.querySelector('.far')
 
 //Hide Button 
 window.onscroll = () => scrollFunction();
 
+// Icon Appear on Scroll
 function scrollFunction() {
 	if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
 		up.style.display = "block";
@@ -41,3 +45,7 @@ function scrollFunction() {
 // Scroll Top
 up.addEventListener('click', () => 	document.documentElement.scrollTop = 0)
 
+// AOS
+AOS.init({
+	duration: 1200,
+})
