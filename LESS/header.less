@@ -96,7 +96,6 @@ header {
 				transition: all 1s;
 				
 				&.active {
-					// position: absolute;
 					height: 300px;
 					transition: all 1s;
 				}
@@ -121,7 +120,7 @@ header {
 	.contButtons {
 		display: flex;
 		justify-content: center;
-		align-content: center;
+		align-items: center;
 		margin-top: 40px;
 
 		@media @mobile {
@@ -129,8 +128,10 @@ header {
 			align-items: center;		
 		}
 
-		p {
-			margin-top: .5rem;
+		span {
+			display: block;
+			margin-top: .2rem;
+			font-size: 1.5rem;
 			color: @mainColor
 		}
 

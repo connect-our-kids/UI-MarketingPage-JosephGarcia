@@ -7,19 +7,19 @@ function myFunction() {
 
 function buttonTextAnimation() {
 	let buttonText = document.querySelector('header h1')
-	TweenMax.to(buttonText, 1, {
-		opacity: 0,
+	TweenMax.from(buttonText, 1.5, {
+		// opacity: 0,
 		// scale: 0,
 		// rotation: 580,
-		ease: Bounce.easeIn,
-		repeat: 3,
-		yoyo: true, 
+		ease: Bounce.easeOut,
+		// repeat: 1,
+		// yoyo: true, 
 		repeatDelay: 1,
-		x: -500
+		x: -1000
 	});
 }  
 
-// buttonTextAnimation()
+buttonTextAnimation()
 
 
 let up = document.querySelector('.far')

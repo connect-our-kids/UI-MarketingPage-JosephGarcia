@@ -272,7 +272,7 @@ p {
   color: white;
 }
 .rome .rating .row .middle .bar-container .bar-5 {
-  width: 60%;
+  width: 100%;
   height: 18px;
   background-color: #4CAF50;
 }
@@ -396,7 +396,7 @@ header .topnav .icon {
 header .contButtons {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   margin-top: 40px;
 }
 @media only screen and (max-width: 800px) {
@@ -405,8 +405,10 @@ header .contButtons {
     align-items: center;
   }
 }
-header .contButtons p {
-  margin-top: 0.5rem;
+header .contButtons span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 1.5rem;
   color: #008eb6;
 }
 header .contButtons h1 {
